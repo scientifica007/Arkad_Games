@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b1025">
+  <meta name="description" content="صالة أركاد عربية تضم ثلاث ألعاب كلاسيكية مجانية تعمل في المتصفح ودون إنترنت: غزاة الفضاء، تحطيم الطوب، والمتاهة.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <title>Retro Arcade | صالة الألعاب الكلاسيكية</title>
+</head>
+<body>
+  <div class="backdrop" aria-hidden="true"><div class="glow glow-a"></div><div class="glow glow-b"></div></div>
+  <div class="site-shell">
+    <header class="topbar">
+      <a href="#main" class="brand" aria-label="الصفحة الرئيسية لصالة الأركاد">
+        <span class="brand-symbol" aria-hidden="true">✦</span>
+        <span class="brand-words"><b>RETRO<span>ARCADE</span></b><small>صالة ألعابك الشخصية</small></span>
+      </a>
+      <div class="header-actions">
+        <span class="online-dot"><span></span> محلي · بلا حساب</span>
+        <button type="button" class="icon-button sound-button" id="soundToggle" title="تشغيل أو إيقاف المؤثرات الصوتية" aria-pressed="false" aria-label="تشغيل المؤثرات الصوتية">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path class="sound-wave" d="M15.5 8.5a5 5 0 0 1 0 7"/><path class="sound-wave" d="M18.5 5a10 10 0 0 1 0 14"/><path class="sound-off" d="m16 9 5 6m0-6-5 6"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="heroTitle">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-star">✳</span> 3 ألعاب أصيلة بروح الثمانينيات</div>
+          <h1 id="heroTitle">متعة <span>الأركاد</span> تعود من جديد.</h1>
+          <p>ثلاث ألعاب كاملة في صالة واحدة. اختر لعبتك، حطّم رقمك القياسي، وابدأ جولة جديدة في أي وقت.</p>
+          <div class="hero-facts"><span>◈ بدون تنزيلات إجبارية</span><span>◈ للحاسوب والهاتف</span><span>◈ دون موسيقى</span></div>
+        </div>
+        <div class="hero-decoration" aria-hidden="true"><div class="orbit orbit-1"></div><div class="orbit orbit-2"></div><div class="hero-glyph">✦</div><div class="hero-deco-text">INSERT COIN<br><span>PRESS START</span></div></div>
+      </section>
+
+      <section class="selection" aria-labelledby="chooseTitle">
+        <div class="section-head"><h2 id="chooseTitle">اختر لعبتك</h2><span>01 — 03 / مجموعة البداية</span></div>
+        <div class="game-cards" id="gameCards">
+          <button type="button" class="game-card selected" data-game="space" aria-pressed="true" aria-label="اختر لعبة غزاة الفضاء">
+            <span class="game-card-graphic space-graphic" aria-hidden="true">
+              <svg viewBox="0 0 140 100"><g fill="currentColor" shape-rendering="crispEdges"><path d="M37 17h10v8h-10zm10-8h10v8H47zm46 0h10v8H93zm10 8h10v8h-10zM57 17h36v8H57zM29 25h92v10H29zM21 35h108v25H21zM21 60h18v16H21zm24 0h60v13H45zm66 0h18v16h-18zM45 73h15v13H45zm45 0h15v13H90z"/></g><path d="M69 88V73m-9 11h18" stroke="#10172e" stroke-width="8"/></svg>
+            </span>
+            <span class="card-copy"><span class="card-meta"><b>01</b><span>SPACE SHOOTER</span></span><strong>غزاة الفضاء</strong><small>أطلق النار · تفادَ الهجمات · اصمد</small><span class="card-choice">اختر اللعبة <span aria-hidden="true">↖</span></span></span>
+          </button>
+          <button type="button" class="game-card" data-game="breakout" aria-pressed="false" aria-label="اختر لعبة تحطيم الطوب">
+            <span class="game-card-graphic brick-graphic" aria-hidden="true"><svg viewBox="0 0 140 100"><g stroke="#10172e" stroke-width="3"><rect x="22" y="13" width="28" height="15" rx="3" fill="#fb6e97"/><rect x="53" y="13" width="28" height="15" rx="3" fill="#fb6e97"/><rect x="84" y="13" width="28" height="15" rx="3" fill="#fb6e97"/><rect x="31" y="32" width="28" height="15" rx="3" fill="#ffbb67"/><rect x="62" y="32" width="28" height="15" rx="3" fill="#ffbb67"/><rect x="93" y="32" width="28" height="15" rx="3" fill="#ffbb67"/></g><circle cx="83" cy="64" r="9" fill="#fff"/><path d="M39 85h65" stroke="#73ebd3" stroke-width="11" stroke-linecap="round"/><path d="m73 71-13 8" stroke="#fff" stroke-width="2" stroke-dasharray="3 4"/></svg></span>
+            <span class="card-copy"><span class="card-meta"><b>02</b><span>BREAKOUT</span></span><strong>تحطيم الطوب</strong><small>حرّك المضرب · ارتدّ بالكرة · حطّم</small><span class="card-choice">اختر اللعبة <span aria-hidden="true">↖</span></span></span>
+          </button>
+          <button type="button" class="game-card" data-game="maze" aria-pressed="false" aria-label="اختر لعبة المتاهة">
+            <span class="game-card-graphic maze-graphic" aria-hidden="true"><svg viewBox="0 0 140 100"><g stroke="#8b82ff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M30 77V18h78v17H56v23h51v22H68"/><path d="M45 77h-7M80 43v16"/></g><circle cx="54" cy="76" r="11" fill="#fbe16f"/><circle cx="84" cy="75" r="4" fill="#fbe16f"/><circle cx="105" cy="75" r="4" fill="#fbe16f"/></svg></span>
+            <span class="card-copy"><span class="card-meta"><b>03</b><span>MAZE CHASE</span></span><strong>المتاهة</strong><small>اجمع النقاط · اهرب من المطاردين</small><span class="card-choice">اختر اللعبة <span aria-hidden="true">↖</span></span></span>
+          </button>
+        </div>
+      </section>
+
+      <section class="arcade-section" aria-label="منطقة اللعب">
+        <div class="arcade-heading"><div><span class="tiny-overline">NOW PLAYING / اللعبة الحالية</span><h2 id="playingTitle">غزاة الفضاء</h2></div><div class="game-status" id="gameStatus"><span class="status-light"></span><span id="statusText">جاهز للعب</span></div></div>
+        <div class="arcade-layout">
+          <div class="game-area">
+            <div class="hud" aria-live="polite" aria-atomic="true">
+              <div class="hud-stat"><span>النقاط</span><b id="scoreDisplay">000000</b></div>
+              <div class="hud-stat"><span>أفضل نتيجة</span><b id="bestDisplay">000000</b></div>
+              <div class="hud-stat"><span>المرحلة</span><b id="levelDisplay">01</b></div>
+              <div class="hud-stat"><span>المحاولات</span><b id="livesDisplay">♥ ♥ ♥</b></div>
+            </div>
+            <div class="screen-shell" id="screenShell">
+              <canvas id="gameCanvas" width="900" height="560" aria-label="ساحة اللعبة، استخدم أزرار التحكم الموجودة أسفلها أو لوحة المفاتيح" tabindex="0">متصفحك لا يدعم Canvas. حدّث المتصفح لتشغيل اللعبة.</canvas>
+              <div class="screen-glare" aria-hidden="true"></div>
+              <div class="game-overlay" id="gameOverlay">
+                <div class="overlay-panel">
+                  <div class="overlay-spark" aria-hidden="true">✦</div>
+                  <span class="overlay-subtitle" id="overlaySubtitle">SPACE SHOOTER</span>
+                  <h3 id="overlayTitle">هل أنت مستعد؟</h3>
+                  <p id="overlayDescription">حرّك المركبة، أطلق النار على الغزاة وتفادَ قذائفهم.</p>
+                  <button type="button" class="primary-button" id="startButton">ابدأ اللعب <span aria-hidden="true">←</span></button>
+                  <small id="overlayHint">للحاسوب: Enter أو Space للبدء</small>
+                </div>
+              </div>
+            </div>
+            <div class="game-toolbar"><div class="toolbar-left"><button type="button" class="toolbar-button" id="pauseButton" disabled><span id="pauseIcon">Ⅱ</span> <span id="pauseLabel">إيقاف مؤقت</span></button><button type="button" class="toolbar-button" id="restartButton">↻ إعادة الجولة</button></div><button type="button" class="toolbar-button fullscreen-button" id="fullscreenButton">⤢ تكبير الشاشة</button></div>
+            <div class="touch-controls" id="touchControls" aria-label="أزرار التحكم باللمس">
+              <div class="direction-pad" id="directionPad"><button type="button" class="control-btn up-btn" data-control="up" aria-label="أعلى">▲</button><button type="button" class="control-btn left-btn" data-control="left" aria-label="يسار">◀</button><button type="button" class="control-btn down-btn" data-control="down" aria-label="أسفل">▼</button><button type="button" class="control-btn right-btn" data-control="right" aria-label="يمين">▶</button></div>
+              <button type="button" class="action-btn" id="actionButton" data-control="fire"><span>●</span><small id="actionLabel">إطلاق</small></button>
+            </div>
+          </div>
+          <aside class="game-side" aria-label="تعليمات وإحصائيات">
+            <div class="side-card instructions-card"><div class="aside-label">دليل اللعبة <span>⌘</span></div><h3 id="guideTitle">دافع عن الأرض</h3><p id="guideDescription">تقدّم الغزاة أسرع مع كل موجة. حافظ على محاولاتك وحطّم الرقم القياسي.</p><div id="controlGuide" class="control-guide"><div><kbd>←</kbd><kbd>→</kbd><span>التحريك</span></div><div><kbd class="wide-key">SPACE</kbd><span>إطلاق النار</span></div></div><div class="side-divider"></div><p class="mobile-tip">على الهاتف: استخدم الأزرار الظاهرة تحت اللعبة.</p></div>
+            <div class="side-card record-card"><div class="aside-label">سجلّك الشخصي <span>◈</span></div><div class="record-main"><span>الرقم القياسي</span><strong id="recordBig">000000</strong></div><div class="record-details"><span>الجولات المنجزة</span><b id="roundsDisplay">0</b></div><small>تُحفظ النتائج داخل هذا المتصفح فقط.</small></div>
+            <div class="mini-note"><span>✳</span><p>اللعب مجاني بالكامل. المؤثرات الصوتية اختيارية، ولا توجد موسيقى أو إعلانات داخل التطبيق.</p></div>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer"><span>RETRO ARCADE <i>✦</i> النسخة 1.0</span><span>مصمم بروح الأركاد · 2026</span></footer>
+  </div>
+  <script src="src/core.js" defer></script>
+  <script src="src/space.js" defer></script>
+  <script src="src/breakout.js" defer></script>
+  <script src="src/maze.js" defer></script>
+  <script src="src/app.js" defer></script>
+</body>
+</html>

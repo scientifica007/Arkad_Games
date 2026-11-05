@@ -1,0 +1,14 @@
+{
+  "id":"./",
+  "name":"Retro Arcade — صالة الألعاب الكلاسيكية",
+  "short_name":"Retro Arcade",
+  "description":"ثلاث ألعاب أركاد أصلية بالعربية تعمل في المتصفح دون موسيقى.",
+  "lang":"ar",
+  "dir":"rtl",
+  "start_url":"./index.html",
+  "scope":"./",
+  "display":"standalone",
+  "background_color":"#090d1c",
+  "theme_color":"#0b1025",
+  "icons":[{"src":"assets/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any maskable"},{"src":"assets/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}]
+}
